@@ -14,11 +14,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.onRenderBody = function (_ref, pluginOptions) {
 	var setPostBodyComponents = _ref.setPostBodyComponents;
 
-	if (process.env.NODE_ENV === "production") {
-		return setPostBodyComponents([_react2.default.createElement("script", { key: "gatsby-plugin-paddle", src: "https://cdn.paddle.com/paddle/paddle.js" }), _react2.default.createElement("script", {
-			key: "gatsby-plugin-paddle-vendor",
-			type: "text/javascript",
-			dangerouslySetInnerHTML: { __html: "Paddle.Setup({ vendor: " + pluginOptions.vendorId + " });" }
-		})]);
-	}
+	return setPostBodyComponents([_react2.default.createElement("script", { key: "gatsby-plugin-paddle", src: "https://cdn.paddle.com/paddle/paddle.js" }), _react2.default.createElement("script", {
+		key: "gatsby-plugin-paddle-vendor",
+		type: "text/javascript",
+		dangerouslySetInnerHTML: { __html: "Paddle.Setup({ vendor: " + pluginOptions.vendorId + " });" }
+	})]);
 };
